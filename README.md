@@ -1,5 +1,5 @@
-![iPhone 12 Mockup](https://user-images.githubusercontent.com/88970775/133527835-31c220a5-d54b-4f74-a41c-2a87e3cac937.png)
-![app1](https://user-images.githubusercontent.com/88970775/133525132-201083e2-bd46-4246-95ed-fb71863ccb18.PNG)
+![Desktop - 3 (1)](https://user-images.githubusercontent.com/88970775/133528126-a090e6e4-e542-4568-8088-8e3a1d4a4c3d.png)
+
 # travelio
 
 A new Flutter project.
