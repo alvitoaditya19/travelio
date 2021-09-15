@@ -132,7 +132,7 @@ class _HomePageState extends State<HomePage> {
         margin: EdgeInsets.only(
           left: defaultMargin,
           right: defaultMargin,
-          top: defaultMargin,
+          top: 25,
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
@@ -201,9 +201,9 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 width: defaultMargin,
               ),
-              TownPage(),
-              TownPage(),
-              TownPage(),
+              TownPage('assets/efel.png', 'Effel Tower'),
+              TownPage('assets/image_fuji.jpg', 'Fuji Mountain'),
+              TownPage('assets/image_marina.jfif', 'Marina Bay Sands'),
               SizedBox(
                 width: 14,
               ),
@@ -247,9 +247,9 @@ class _HomePageState extends State<HomePage> {
     Widget product() {
       return Container(
         child: Column(children: [
-          ProductPage(),
-          ProductPage(),
-          ProductPage(),
+          ProductPage('assets/england.png', 'Big Benn London'),
+          ProductPage('assets/image_fuji.jpg', 'Fuji Mountain'),
+          ProductPage('assets/image_marina.jfif', 'Marina Bay Sands'),
         ]),
       );
     }

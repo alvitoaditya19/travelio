@@ -3,6 +3,8 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:travelio/shared/theme.dart';
 
 class TownPage extends StatelessWidget {
+  final String imageUrl;
+  final String nameTower;
   List<Widget> widgets = List.generate(
       5,
       (index) => Icon(
@@ -10,6 +12,8 @@ class TownPage extends StatelessWidget {
             color: Colors.yellow,
             size: 18,
           ));
+
+  TownPage(this.imageUrl, this.nameTower);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,7 +32,10 @@ class TownPage extends StatelessWidget {
             height: 130.0,
             width: 130.0,
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/efel.png')),
+              image: DecorationImage(
+                image: AssetImage(imageUrl),
+                fit: BoxFit.cover,
+              ),
               color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(24.0)),
             ),
@@ -62,10 +69,10 @@ class TownPage extends StatelessWidget {
                 )),
           ),
           SizedBox(
-            height: 2,
+            height: 6,
           ),
           Text(
-            'Effel Tower',
+            nameTower,
             style: secondaryTextStyle.copyWith(fontWeight: medium),
           ),
           SizedBox(

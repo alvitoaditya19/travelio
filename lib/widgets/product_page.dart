@@ -3,6 +3,8 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:travelio/shared/theme.dart';
 
 class ProductPage extends StatelessWidget {
+  final String imageUrl;
+  final String nameTower;
   List<Widget> widgets = List.generate(
       5,
       (index) => Icon(
@@ -10,6 +12,8 @@ class ProductPage extends StatelessWidget {
             color: Colors.yellow,
             size: 24,
           ));
+
+  ProductPage(this.imageUrl, this.nameTower);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,12 +27,16 @@ class ProductPage extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(40),
-            child: Image.asset(
-              'assets/england.png',
-              width: 110,
-              height: 126,
+          Container(
+            width: 110,
+            height: 126,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(imageUrl),
+                fit: BoxFit.cover,
+              ),
+              color: Colors.white,
+              borderRadius: BorderRadius.all(Radius.circular(24.0)),
             ),
           ),
           SizedBox(
@@ -41,7 +49,7 @@ class ProductPage extends StatelessWidget {
                 height: 6,
               ),
               Text(
-                'Big Benn London',
+                nameTower,
                 style: secondaryTextStyle.copyWith(
                   fontSize: 16,
                   fontWeight: medium,
